@@ -1,0 +1,64 @@
+<meta charset = "UTF-8">
+
+<br>
+<input />
+<button id="adicionar">ADICIONAR NA MALA</button>
+<button id="remover">REMOVER DA MALA</button>
+<br><br>
+<label></label>
+<hr>
+
+<script>
+    function mostrar() {
+        var mensagem = "";
+        for(var i = 0; i < malaDeViagem.length; i++)
+        {
+            if(i > 0) {
+                mensagem += (", " + malaDeViagem[i]);
+            } else {
+                mensagem += malaDeViagem[i];
+            }
+        }
+        document.querySelector("label").innerText = "Sua mala até o momento possui: " + mensagem + ".";
+    }
+
+    function reiniciarCampodeTexto() {
+        campoDeTexto.value = "";
+        campoDeTexto.focus();
+    }
+
+    function removerItemDoArray(malaDeViagem) {
+        var itemParaRemover = campoDeTexto.value;
+        var novaMalaDeViagem = [];
+        for(var posicao=0;posicao<malaDeViagem.length;posicao++) {
+            if(malaDeViagem[posicao] != itemParaRemover) {
+                novaMalaDeViagem.push(malaDeViagem[posicao]);
+            }
+        }
+        return novaMalaDeViagem;
+    }
+
+    function adicionar() {
+        malaDeViagem.push(campoDeTexto.value);
+        reiniciarCampodeTexto();
+        console.log(malaDeViagem);
+        mostrar();
+    }
+
+    function remover() {
+        // cria um novo array a partir do antigo, removendo o item descrito no campo de texto
+        malaDeViagem = removerItemDoArray(malaDeViagem);
+        reiniciarCampodeTexto();
+        // filter = condição = retorna todos os itens da mala que forem difente do item que foi digitado
+        // malaDeViagem = malaDeViagem.filter((itemNaMala) => itemNaMala != itemParaRemover);
+        console.log(malaDeViagem);
+        mostrar();
+    }
+
+    var malaDeViagem = [];
+    var campoDeTexto = document.querySelector("input");
+    var botaoAdicionar = document.getElementById("adicionar");
+    var botaoRemover = document.getElementById("remover")
+    botaoAdicionar.onclick = adicionar;
+    botaoRemover.onclick = remover
+</script>

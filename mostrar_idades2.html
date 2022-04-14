@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+	function pularLinha() {
+		document.write("<br><hr><br>");
+	}
+	function mostrar(mensagem) {
+		document.write("<big>"+mensagem+"</big>");
+		pularLinha();
+	}
+	var data = new Date();
+	var ano = data.getFullYear();
+	mostrar("Charles nasceu em : " + (ano - 32));
+	mostrar("Flávio nasceu em : " + (ano - 25));
+	mostrar("Adriano nasceu em : " + (ano - 26));
+	mostrar("Paulo nasceu em : " + (ano - 32));
+
+</script>

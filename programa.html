@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+	function pularLinha() {
+		document.write("<br><br>");
+	}
+	function mostrar(frase) {
+		document.write(frase);
+		pularLinha();
+	}
+
+	var data = new Date();
+	var ano = data.getFullYear();
+    var idadeCharles = ano - 1989;
+	var idadeFlávio = ano - 1977;
+	var idadeJoaquim = ano - 1996;
+	var idadeBarney = ano - 1976;
+    var media = (idadeCharles+idadeFlávio+idadeJoaquim+idadeBarney)/4;
+
+	mostrar("Charles Gabriel tem "+idadeCharles+" anos");
+	mostrar("Flávio tem "+idadeFlávio+" anos");
+    mostrar("Joaquim tem "+idadeJoaquim+" anos");
+    mostrar("Barney tem "+idadeBarney+" anos");
+	mostrar("A média das idades é "+Math.round(media));
+</script>

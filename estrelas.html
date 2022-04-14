@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+	function pularLinha(linhas) {
+		for(let i = 0; i < linhas; i++) {
+			document.write("<br>");
+		}
+	}
+	function mostrar(linhas, mensagem) {
+		document.write(mensagem);
+		pularLinha(linhas);
+	}
+	for(var linha = 1; linha <= 3; linha++) {
+		for(var coluna = 1; coluna <= 10; coluna++) {
+			mostrar(0, "*");
+		}
+		pularLinha(1);
+	}
+</script>

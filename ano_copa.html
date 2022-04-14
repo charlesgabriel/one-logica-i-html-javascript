@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+	function pularLinha() {
+		document.write("<br><br>");
+	}
+	function mostrar(mensagem) {
+		document.write(mensagem);
+		pularLinha();
+	}
+	var anoCopa = 1930;
+	var data = new Date();
+	var anoAtual = data.getFullYear();
+	while(anoCopa <= anoAtual) {
+		mostrar("Teve copa em " + anoCopa + ".");
+		anoCopa = anoCopa + 4;
+	}
+	mostrar("Fim.");
+</script>

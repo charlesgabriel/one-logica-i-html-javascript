@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script>
+	function pularLinha() {
+		document.write("<br>");
+	}
+	function mostrar(mensagem) {
+		document.write(mensagem);
+		pularLinha();
+	}
+	const data = new Date();
+	const anoAtual = data.getFullYear();
+	var chegadaAoBrasil = 1500;
+	var idadeMediaCasal = 28;
+	const totalGeracoes = (anoAtual - chegadaAoBrasil) / idadeMediaCasal;
+	mostrar("De "+chegadaAoBrasil+" até o ano de hoje, "+anoAtual+", o Brasil possui "+Math.floor(totalGeracoes)+" gerações.")
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+	function pularLinha() {
+		document.write("<br>");
+	}
+	function mostrar(mensagem) {
+		document.write(mensagem);
+		pularLinha();
+	}
+	function mostrarTabuada(multiplicador, tabuada) {
+		document.write(tabuada + " x " + multiplicador + " = " + tabuada * multiplicador);
+		pularLinha();
+	}
+	var tabuada = parseInt(prompt("Digite o número da tabuada:"));
+	// i = multiplicador
+	// for(var i = 0; i < 10; i++) {
+	// 	mostrarTabuada(i+1, tabuada);
+	// }
+	// 
+	var i = 0;
+	while(i < 10) {
+		mostrarTabuada(i+1, tabuada);
+		i++
+	}
+	// 
+	mostrar("Fim.");
+</script>

@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+
+<script>
+	function pularLinha(numero) {
+		for(let i=0; i<numero; i++) {
+			document.write("<br>");
+		}
+	}
+	function mostrar(numero, mensagem) {
+		document.write(mensagem);
+		pularLinha(numero);
+	}
+	var parcelas = [10.40, 40.00, 100.18, 200];
+	for(var i = 0; i < parcelas.length; i = i + 1) {
+		mostrar(1, parcelas[i]);
+	}
+	mostrar(0, "FIM");
+</script>

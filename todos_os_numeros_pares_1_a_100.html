@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script>
+	function pularLinha() {
+		document.write("<br>");
+	}
+	function mostrar(mensagem) {
+		document.write(mensagem);
+		pularLinha();
+	}
+	numero = 2;
+	while(numero <= 100) {
+		mostrar(numero);
+		numero += 2;
+	}
+	mostrar("Fim");
+</script>
